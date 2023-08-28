@@ -1,0 +1,89 @@
+<div style="width: 100%; min-height: 100vh; flex-direction: column; display: flex; gap: 1rem; justify-content: center; align-items: center; overflow: auto;">
+
+    <section>
+        <h1 class="codeTitle">Decode</h1>
+        <input style="padding: 0.5rem 1rem;" type="email" class="get_code" placeholder="Enter email">
+        <button onclick="getCoded(this)">Submit</button>
+    </section>
+
+    <section>
+        <h1 class="codeTitle">Encode</h1>
+        <input style="padding: 0.5rem 1rem;" type="email" class="get_code" placeholder="Enter email">
+        <button onclick="getCoded(this)">Submit</button>
+    </section>
+
+    <section id="code_container"></section>
+
+</div>
+
+
+<script>
+    const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+   const base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+
+// if (base64regex.test(tokenInput.value) && isNaN(tokenInput.value) && !/^[a-zA-Z]+$/.test(tokenInput.value))
+
+
+
+    // let sub_btn = document.getElementById("sub_btn")
+    // let get_code = document.getElementById("get_code")
+    let code_container = document.getElementById("code_container")
+
+    let myString
+
+    function getCoded (x) {
+// && validEmail.test(get_code.value)
+        const d = x.parentElement
+        const titles = d.getElementsByClassName("codeTitle")[0];
+        const get_code = d.getElementsByClassName("get_code")[0];
+
+        let myString = get_code.value;
+
+        if (titles.innerText == "Decode") {
+            let encodedValue = btoa(myString);
+            if (get_code.value !="") {
+            code_container.innerHTML = `
+            <br>
+            <span id="code_ans">${encodedValue}</span>
+            <br><br>
+            <button id="code_btn" onclick="copyToClip()">Copy</button>
+            
+            `
+            } 
+        }
+
+        if (titles.innerText == "Encode") {
+            let decodedValue = atob(myString);
+
+            if (get_code.value !="") {
+            code_container.innerHTML = `
+            <br>
+            <span id="code_ans">${decodedValue}</span>
+            <br><br>
+            <button id="code_btn" onclick="copyToClip()">Copy</button>
+            
+            `
+        }
+    }
+}
+
+    const copyToClip = async () => {
+        let code_ans = document.getElementById("code_ans").innerHTML;
+        let code_btn = document.getElementById("code_btn");
+    try {
+      await navigator.clipboard.writeText(code_ans);
+      code_btn.innerHTML = "Copied !"
+    } 
+    catch (err) {
+        code_btn.innerHTML = "Error !"
+        console.error('Failed to copy: ', err);
+    }
+
+    setTimeout(() => {
+        code_btn.innerHTML = "Copy"
+      }, 2000);
+  }
+
+  get_code.value = ""
+</script>
