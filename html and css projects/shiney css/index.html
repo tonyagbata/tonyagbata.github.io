@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shiney css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        background: radial-gradient(
+            circle at center,
+            cyan,
+            rgb(77, 136, 212),
+            blue
+          ),
+          100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+      }
+
+      form {
+        width: 400px;
+        margin: 0px;
+        padding: 30px;
+        box-shadow: 1px, 2px, 3px rgba(50, 50, 50, 0.87);
+        background-color: white;
+      }
+      .form-head {
+        font-size: 25px;
+        text-align: center;
+      }
+      input {
+        border: none;
+        border-bottom: 2px solid purple;
+        padding: 5px;
+        margin: 5px 0px;
+        width: 100%;
+        outline: none;
+      }
+
+      .button-action {
+        text-align: center;
+      }
+
+      button {
+        border-radius: 8px;
+        border: none;
+        padding: 8px 12px;
+        color: whitesmoke;
+        font-weight: 800;
+        cursor: pointer;
+        outline: none;
+        background-color: purple;
+        margin-top: 10px;
+        background-repeat: no-repeat;
+        background-position: -120px -120px 0 0;
+        background: linear-gradient(45deg, yellow, purple, red, blue);
+        background-size: 250% 250%, 100% 100%;
+        transition: 2s ease-in-out;
+      }
+
+      button:hover {
+        background: linear-gradient(35deg, blue, purple, green);
+        background-position: 0 0;
+        transition: 1s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <h3 class="form-head">Registeration</h3>
+        <div class="inputFlex">
+          <input type="text" placeholder="Enter name" />
+          <input type="email" name="" placeholder="Enter email" />
+        </div>
+        <div class="button-action">
+          <button type="submit">submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

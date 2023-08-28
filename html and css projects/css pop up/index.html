@@ -1,0 +1,117 @@
+﻿<style>
+html {
+  font-family: "Abel", sans-serif;
+  color: #FFF;
+}
+
+#wrapper {
+  height: 100vh;
+}
+
+#overlay {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+#info {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  background: rgba(99, 99, 99, .9);
+  /*    box-shadow: 10px 10px 50px 20px #722f37;*/
+  
+  width: 90%;
+  max-width: 400px;
+  padding: 40px;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 1s;
+  z-index: 99;
+  box-shadow: 20px 20px 0 -5px rgba(68, 68, 68, .9);
+  
+  transform: translate(-50%, -50%);
+}
+
+
+#info button:hover {
+  color: #999;
+}
+
+#info label#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  margin: 15px;
+  font-size: 1.6em;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"][id="open"]:checked ~ #overlay {
+  opacity: .8;
+  z-index: 98;
+}
+
+input[type="radio"][id="open"]:checked ~ #info {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label {
+  color: #FFF;
+}
+
+label:hover {
+  Color: #999;
+  cursor: pointer;
+}
+
+#button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 4px;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 2em;
+  color: #999;
+  cursor: pointer;
+  transition: .5s;
+}
+
+#button:hover {
+  color: #9df;
+}
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<div id="wrapper">
+  <input type="radio" id="open" name="popup">
+  <input type="radio" id="close" name="popup">
+  <div id="popup">
+    <label id="button" for="open">MORE INFO</label>
+  </div>
+  <div id="overlay"></div>
+  <div id="info">
+    <h1>More info</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <label id="close" for="close"><i class="fa fa-times-circle fa-lg"></i></label>
+  </div>
+</div>

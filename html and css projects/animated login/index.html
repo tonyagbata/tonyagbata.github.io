@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="inner-box" id="3d-card">
+          <div class="card-front">
+            <h2>Log in</h2>
+            <form action="">
+              <input
+                type="email"
+                class="input-box"
+                required
+                placeholder="Enter email address"
+              />
+              <input
+                type="password"
+                class="input-box"
+                required
+                placeholder="Enter password"
+              />
+              <button type="submit" class="submit-btn">Log in</button>
+              <input type="checkbox" /> <span>Rember me</span>
+            </form>
+            <button type="button" class="btn" onclick="openRegister()">
+              Dont av an account?
+            </button>
+            <a href="">Forgot password</a>
+          </div>
+
+          <div class="card-back">
+            <h2>Register account</h2>
+            <form action="">
+              <input
+                type="text"
+                class="input-box"
+                required
+                placeholder="Enter Your name"
+              />
+              <input
+                type="email"
+                class="input-box"
+                required
+                placeholder="Enter email address"
+              />
+              <input
+                type="password"
+                class="input-box"
+                required
+                placeholder="Enter password"
+              />
+              <button type="submit" class="submit-btn">Sign up</button>
+              <input type="checkbox" /> <span>Rember me</span>
+            </form>
+            <button type="button" class="btn" onclick="openLogin()">
+              Already av an account?
+            </button>
+            <a href="">Forgot password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var card = document.getElementById("3d-card");
+
+      function openRegister() {
+        card.style.transform = "rotateY(-180deg)";
+      }
+
+      function openLogin() {
+        card.style.transform = "rotateY(0deg)";
+      }
+    </script>
+  </body>
+</html>
