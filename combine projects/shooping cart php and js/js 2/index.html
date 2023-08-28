@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart system js 2</title>
+    <style>
+      .hdTog {
+        color: red;
+      }
+      .shTog {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home Logo</li>
+          <li>cool Shopping Mall</li>
+          <li>
+            <div>Cart logo</div>
+            <div><span>Items</span> - <span>$20.9</span></div>
+
+            <div></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="tog">
+        Menu
+        <li class="hdTog">1</li>
+        <li class="hdTog">2</li>
+        <li class="hdTog">3</li>
+      </div>
+
+      <div id="noTog" style="display: none">
+        <li class="shTog">1</li>
+        <li class="shTog">2</li>
+        <li class="shTog">3</li>
+      </div>
+    </main>
+    <script>
+      (function () {
+        const tog = document.getElementById("tog");
+        const hdTog = document.getElementsByClassName("hdTog");
+        const shTog = document.getElementsByClassName("shTog");
+        const noTog = document.getElementsByClassName("noTog");
+
+        tog.addEventListener("click", function () {
+          tog.classList.toggle("noTog");
+          alert("stop!");
+        });
+      })();
+    </script>
+  </body>
+</html>

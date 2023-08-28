@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server-Sent Events Example</title>
+</head>
+<body>
+    <h1>Server-Sent Events Example</h1>
+    <div id="result"></div>
+
+    <script>
+        // Create an EventSource object and specify the server-side script
+        var eventSource = new EventSource('server.php');
+
+        // Event handler for receiving SSE events
+        eventSource.onmessage = function(event) {
+            // Display the received data in the result div
+
+            alert("Hey")
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Received: ' + event.data;
+        };
+    </script>
+</body>
+</html>

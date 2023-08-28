@@ -1,0 +1,174 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+/*
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+*/
+header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: ease-in-out 0.2s;
+}
+
+button:hover {
+  font-weight: bold;
+}
+
+main {
+  margin: 5px;
+}
+
+.addCart {
+  background: blue;
+  color: white;
+  padding: 3px 10px;
+}
+
+.removeCart {
+  background-color: red;
+  color: white;
+  padding: 3px 10px;
+}
+
+.one {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
+
+.productConatiner {
+  border: 2px solid darkred;
+  border-radius: 5px;
+  padding: 10px 3px;
+  margin-top: 10px;
+}
+
+.productImg {
+  width: 100%;
+}
+
+.productName {
+  font-weight: bold;
+}
+
+.productDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.two {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.two label {
+  font-weight: bold;
+  text-align: center;
+}
+
+.itemLabels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 40px;
+}
+
+.cartProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid darkred;
+  border-width: 2px 0px 0px 0px;
+  padding: 5px 10px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.cartProducts input {
+  width: 50px;
+  padding: 5px;
+  border: 2px solid skyblue;
+  border-radius: 3px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.cartProducts input:focus {
+  outline-style: none;
+}
+
+.total {
+  display: flex;
+  gap: 20px;
+  justify-content: right;
+  border: 2px solid darkred;
+  padding: 10px 20px;
+  border-width: 2px 0px 0px 0px;
+}
+
+.leb1,
+.cart1 {
+  width: 50%;
+}
+
+.leb2,
+.cart2 {
+  width: 15%;
+}
+
+.leb3,
+.cart3 {
+  width: 20%;
+}
+
+.btn_purchase {
+  display: flex;
+  justify-content: center;
+}
+.purchased {
+  background: darkgreen;
+  color: white;
+  padding: 5px 10px;
+}
+
+#receipt {
+  text-align: center;
+}
