@@ -1,0 +1,43 @@
+[
+    {
+        "vocational": {
+            "id": "Mechanic",
+            "pics": {
+                "one": "./pics/car-break-down1.jpg",
+                "two": "./pics/car-break-down2.jpg",
+                "three": "./pics/car-break-down3.jpg",
+                "four": "./pics/car-break-down4.png"
+            },
+            "writeUp": {
+                "one": "Did your car just broke-down or you need road side assistance?",
+                "two": "No worries, we have got you covered With over a million auto mobile specialist; help is on the way !"
+            }
+        },
+        "artisian": {
+            "id": "Cleaners",
+            "pics": {
+                "one": "./pics/house-care-call1.jpg",
+                "two": "./pics/house-care-call2.webp",
+                "three": "./pics/house-care-call3.jpg",
+                "four": "./pics/house-care-call4.jpg"
+            },
+            "writeUp": {
+                "one": "Overwhelmed by the house cleaning and mess at the your home?",
+                "two": "No worries, you can always call on professionals !"
+            }
+        },
+        "professional": {
+            "id": "Teacher",
+            "pics": {
+                "one": "./pics/student-teacher1.webp",
+                "two": "./pics/student-teacher2.jpg",
+                "three": "./pics/student-teacher3.jpg",
+                "four": "./pics/student-teacher4.webp"
+            },
+            "writeUp": {
+                "one": "Need help getting ahead of your class and accedmic works ?",
+                "two": "No worries, tutors available both on and offline to lend helping hands !"
+            }
+        }
+    }
+]
